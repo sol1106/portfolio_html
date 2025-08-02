@@ -1,0 +1,85 @@
+html{
+  scroll-behavior: smooth;
+}
+.Header{
+    align-items: center;
+    display: flex;
+    height: 30px;
+    margin: auto;
+    background-color: #efefef;
+    justify-content: flex-end;
+}
+.nav_Class{
+  display: flex;
+}
+.nav_Item{
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    margin-right: 1.5cm;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 20px;
+}
+.copyrightText{
+    color: black;
+    background-color: #FFFFFF88;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 32px;
+    position-anchor: center;
+    margin-left: auto;
+}
+.headerText{
+    background: linear-gradient(to bottom, red,#770000);
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 2cm;
+    font-size: 32px;
+    color: white;
+    text-shadow:
+      2px 2px 0 #000,
+      -2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000;
+}
+.headtext{
+    color: white;
+    text-align: center;
+    font-family: "HGP創英角ｺﾞｼｯｸUB";
+    font-size: 40px;
+    background: linear-gradient(to right, rgb(162, 0, 0),red,white);
+    margin-top: 3cm;
+}
+.X_icon{
+    background-color: #00000000;
+    border: none;
+}
+.GitHub_icon{
+    background-color: #00000000;
+    border: none;
+}
+.YouTube_icon{
+    background-color: #00000000;
+    border: none;
+}
+.Footer{
+    background-color: #efefefcc;
+    text-align: center;
+    margin-top: 3rem;
+}
+/* 画像資料 */
+.ImageBox{
+  text-align: center;
+  margin-top: 2cm;
+}
+/* ページの先頭まで戻るボタン用 */
+.back_div{
+  text-align: center;
+  margin-top: 1cm;
+}
+.backbutton{
+  background-color: #FFFFFF00;
+  border: none;
+}

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ポートフォリオサイト</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="icon" href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\「VCB」.ico">
+    </head>
+    <body background="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\game2203.png">
+        <header class="Header">
+            <nav>
+                <ul class="nav_Class" role="tablist">
+                    <li role="tab" class="nav_Item" aria-selected="false">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\index.html">
+                            HOME
+                        </a>
+                    </li>
+                    <li role="tab" class="nav_Item" aria-selected="false">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\INTRODUCTION_webPage\index.html">
+                            INTRODUCTION
+                        </a>
+                    </li>
+                    <li role="tab" class="nav_Item" aria-selected="false">
+                        <a href="index.html">
+                            COLLECTION
+                        </a>
+                    </li>
+                    <li role="tab" class="nav_Item" aria-selected="false">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\SKILLS_webPage\index.html">
+                            SKILLS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="headerText">
+            <h1>COLLECTION</h1>
+        </div>
+        <section>
+            <div class="headtext">
+                <p>ゲーム作品</p>
+            </div>
+            <div class="dropdown_parent">
+                <div class="dropdown_production_parent">
+                    <label for="production" style="color: white;">制作形態：</label>
+                    <select id="production" class="dropdown">
+                        <option value="" selected>選択してください</option>
+                        <option value="個人">個人制作</option>
+                        <option value="チーム">チーム制作</option>
+                    </select>
+                </div>
+                <div class="dropdown_grade_parent">
+                    <label for="grade" style="color: white;">制作年次：</label>
+                    <select id="grade" class="dropdown">
+                        <option value="" selected>選択してください</option>
+                        <option value="1">1年次</option>
+                        <option value="2">2年次</option>
+                        <option value="3">3年次</option>
+                    </select>
+                </div>
+                <div class="dropdown_category_parent">
+                    <label for="category" style="color: white;">カテゴリ：</label>
+                    <select id="category" class="dropdown">
+                        <option value="" selected>選択してください</option>
+                        <option value="2D">2D</option>
+                        <option value="3D">3D</option>
+                        <option value="VR">VR</option>
+                    </select>
+                </div>
+            </div>
+            <div class="searchBox">
+                <input class="searchText" type="button" value="検索" id="checkButton">
+                <script>
+                    function buttonClick(){
+                        // 「個人」
+                        if(productionSelect.value == '個人'){
+                            document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                            document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                            document.getElementById('EE_Catcher').style.display = "none";
+                            
+                            // 「個人」「1年次」
+                            if(gradeSelect.value == '1'){
+                                // 「1年次」ではない作品は非表示にする
+                                document.getElementById('Brave_Quarter').style.display = "none";
+                                document.getElementById('Black_Jack').style.display = "none";
+                                document.getElementById('Rabbit_Runner').style.display = "none";
+                                document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                document.getElementById('Hit&Blow').style.display = "none";
+
+                                // 「個人」「1年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                }
+                                // 「個人」「1年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                }
+                                // 「個人」「1年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                }
+                                // 「個人」「1年次」「未選択」
+                                else{
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                }
+                            }
+                            // 「個人」「2年次」
+                            else if(gradeSelect.value == '2'){
+                                // 「2年次」ではない作品は非表示にする
+                                document.getElementById('GALAXY_WARS').style.display = "none";
+                                document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                document.getElementById('COLLECT_STARS').style.display = "none";
+                                document.getElementById('Block_Breaker').style.display = "none";
+                                document.getElementById('Rabbit_Runner').style.display = "none";
+                                document.getElementById('Hit&Blow').style.display = "none";
+
+                                // 「個人」「2年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                }
+                                // 「個人」「2年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";
+                                }
+                                // 「個人」「2年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                }
+                                // 「個人」「2年次」「未選択」
+                                else{
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";
+                                }
+                            }
+                            // 「個人」「3年次」
+                            else if(gradeSelect.value == '3'){
+                                // 「3年次」ではない作品は非表示にする
+                                document.getElementById('GALAXY_WARS').style.display = "none";
+                                document.getElementById('Brave_Quarter').style.display = "none";
+                                document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                document.getElementById('COLLECT_STARS').style.display = "none";
+                                document.getElementById('Black_Jack').style.display = "none";
+                                document.getElementById('Block_Breaker').style.display = "none";
+                                document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                
+                                // 「個人」「3年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('Hit&Blow').style.display = "";
+                                }
+                                // 「個人」「3年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('Hit&Blow').style.display = "none";
+                                }
+                                // 「個人」「3年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('Hit&Blow').style.display = "none";
+                                }
+                                // 「個人」「3年次」「未選択」
+                                else{
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('Hit&Blow').style.display = "";
+                                }
+                            }
+                            // 「個人」「未選択」
+                            else{
+                                // 「個人」「未選択」「2D」
+                                if (categorySelect.value == '2D'){
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";                            
+                                    document.getElementById('Hit&Blow').style.display = "";                            
+                                }
+                                // 「個人」「未選択」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";                            
+                                    document.getElementById('Hit&Blow').style.display = "none";                            
+                                }
+                                // 「個人」「未選択」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                    document.getElementById('Hit&Blow').style.display = "none";
+                                }
+                                // 「個人」「未選択」「未選択」
+                                else{
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";                            
+                                    document.getElementById('Hit&Blow').style.display = "";                            
+                                }
+                            }
+                        }
+                        // 「チーム」
+                        else if(productionSelect.value == 'チーム'){
+                            document.getElementById('GALAXY_WARS').style.display = "none";
+                            document.getElementById('Brave_Quarter').style.display = "none";
+                            document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                            document.getElementById('COLLECT_STARS').style.display = "none";
+                            document.getElementById('Black_Jack').style.display = "none";
+                            document.getElementById('Block_Breaker').style.display = "none";
+                            document.getElementById('Rabbit_Runner').style.display = "none";
+                            document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                            document.getElementById('Hit&Blow').style.display = "none";
+
+                            // 「チーム」「1年次」
+                            if (gradeSelect.value == '1'){
+                                // 「1年次」ではない作品は非表示にする
+                                document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                document.getElementById('EE_Catcher').style.display = "none";
+
+                                // 「チーム」「1年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    // 該当作品なし
+                                }
+                                // 「チーム」「1年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    // 該当作品なし
+                                }
+                                // 「チーム」「1年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    // 該当作品なし
+                                }
+                                // 「チーム」「1年次」「未選択」
+                                else{
+                                    // 該当作品なし
+                                }
+                            }
+                            // 「チーム」「2年次」
+                            else if(gradeSelect.value == '2'){
+                                // 「チーム」「2年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                }
+                                // 「チーム」「2年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                }
+                                // 「チーム」「2年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                }
+                                // 「チーム」「2年次」「未選択」
+                                else{
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                }
+                            }
+                            // 「チーム」「3年次」
+                            else if(gradeSelect.value == '3'){
+                                // 「3年次」ではない作品は非表示にする
+                                document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                document.getElementById('EE_Catcher').style.display = "none";
+
+                                // 「チーム」「3年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    // 該当作品なし
+                                }
+                                // 「チーム」「3年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    // 該当作品なし
+                                }
+                                // 「チーム」「3年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    // 該当作品なし
+                                }
+                                // 「チーム」「3年次」「未選択」
+                                else{
+                                    // 該当作品なし
+                                }
+                            }
+                            // 「チーム」「未選択」
+                            else{
+                                // 「チーム」「未選択」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                }
+                                // 「チーム」「未選択」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                }
+                                // 「チーム」「未選択」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                }
+                                // 「チーム」「未選択」「未選択」
+                                else{
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                }
+                            }
+                        }
+                        // 「未選択」
+                        else{
+                            // 「未選択」「1年次」
+                            if(gradeSelect.value == '1'){
+                                // 「1年次」ではない作品は非表示にする
+                                document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                document.getElementById('Brave_Quarter').style.display = "none";
+                                document.getElementById('Black_Jack').style.display = "none";
+                                document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                document.getElementById('EE_Catcher').style.display = "none";
+                                document.getElementById('Rabbit_Runner').style.display = "none";
+                                document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                document.getElementById('Hit&Blow').style.display = "none";
+
+                                // 「未選択」「1年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                }
+                                // 「未選択」「1年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                }
+                                // 「未選択」「1年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                }
+                                // 「未選択」「1年次」「未選択」
+                                else{
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                }
+                            }
+                            // 「未選択」「2年次」
+                            else if(gradeSelect.value == '2'){
+                                // 「2年次」ではない作品は非表示にする
+                                document.getElementById('GALAXY_WARS').style.display = "none";
+                                document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                document.getElementById('COLLECT_STARS').style.display = "none";
+                                document.getElementById('Block_Breaker').style.display = "none";
+                                document.getElementById('Rabbit_Runner').style.display = "none";
+                                document.getElementById('Hit&Blow').style.display = "none";
+
+                                // 「未選択」「2年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                }
+                                // 「未選択」「2年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";
+                                }
+                                // 「未選択」「2年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                }
+                                // 「未選択」「2年次」「未選択」
+                                else{
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";
+                                }
+                            }
+                            // 「未選択」「3年次」
+                            else if(gradeSelect.value == '3'){
+                                // 「3年次」ではない作品は非表示にする
+                                document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                document.getElementById('GALAXY_WARS').style.display = "none";
+                                document.getElementById('Brave_Quarter').style.display = "none";
+                                document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                document.getElementById('COLLECT_STARS').style.display = "none";
+                                document.getElementById('Black_Jack').style.display = "none";
+                                document.getElementById('Block_Breaker').style.display = "none";
+                                document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                document.getElementById('EE_Catcher').style.display = "none";
+                                document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+
+                                // 「未選択」「3年次」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('Hit&Blow').style.display = "";
+                                }
+                                // 「未選択」「3年次」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('Hit&Blow').style.display = "none";
+                                }
+                                // 「未選択」「3年次」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('Hit&Blow').style.display = "none";
+                                }
+                                // 「未選択」「3年次」「未選択」
+                                else{
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('Hit&Blow').style.display = "";
+                                }
+                            }
+                            // 「未選択」「未選択」
+                            else{
+                                // 「未選択」「未選択」「2D」
+                                if(categorySelect.value == '2D'){
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                    document.getElementById('Hit&Blow').style.display = "";
+                                }
+                                // 「未選択」「未選択」「3D」
+                                else if(categorySelect.value == '3D'){
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "none";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";
+                                    document.getElementById('Hit&Blow').style.display = "none";
+                                }
+                                // 「未選択」「未選択」「VR」
+                                else if(categorySelect.value == 'VR'){
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                    document.getElementById('GALAXY_WARS').style.display = "none";
+                                    document.getElementById('Brave_Quarter').style.display = "none";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "none";
+                                    document.getElementById('Black_Jack').style.display = "none";
+                                    document.getElementById('Block_Breaker').style.display = "none";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "none";
+                                    document.getElementById('EE_Catcher').style.display = "none";
+                                    document.getElementById('Rabbit_Runner').style.display = "none";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "none";
+                                    document.getElementById('Hit&Blow').style.display = "none";
+                                }
+                                // 「未選択」「未選択」「未選択」
+                                else{
+                                    document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                    document.getElementById('GALAXY_WARS').style.display = "";
+                                    document.getElementById('Brave_Quarter').style.display = "";
+                                    document.getElementById('Adventure_of_TheBrave').style.display = "";
+                                    document.getElementById('COLLECT_STARS').style.display = "";
+                                    document.getElementById('Black_Jack').style.display = "";
+                                    document.getElementById('Block_Breaker').style.display = "";
+                                    document.getElementById('Unity-Chan!_Runner').style.display = "";
+                                    document.getElementById('EE_Catcher').style.display = "";
+                                    document.getElementById('Rabbit_Runner').style.display = "";
+                                    document.getElementById('HIGH_SPEED_RACING_3D').style.display = "";
+                                    document.getElementById('Hit&Blow').style.display = "";
+                                }
+                            }
+                        }
+                    }
+
+                    let productionSelect = document.getElementById('production');
+                    let gradeSelect = document.getElementById('grade');
+                    let categorySelect = document.getElementById('category');
+
+                    let checkButton = document.getElementById('checkButton');
+                    checkButton.addEventListener('click', buttonClick);
+                </script>
+            </div>
+        </section>
+        <section>
+            <div class="ImageBoxParent">
+                <!-- Universe Rhythm Shooting -->
+                <!-- 制作形態：チーム / 制作年次：2年次 / カテゴリ：VR -->
+                <div id="Universe_Rhythm_Shooting" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\UniverseRhythmShooting_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\URS_Button.png"
+                                alt="URS_ボタン" width="476" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- GALAXY WARS -->
+                <!-- 制作形態：個人 / 制作年次：1年次 / カテゴリ：2D -->
+                <div id="GALAXY_WARS" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\GALAXY_WARS_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\GALAXY_WARS_Button.png"
+                                alt="GALAXY_WARS_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Brave Quarter -->
+                <!-- 制作形態：個人 / 制作年次：2年次 / カテゴリ：2D -->
+                <div id="Brave_Quarter" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\Brave_Quarter_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\BraveQuarter_Button.png"
+                                alt="BraveQuarter_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Adventure of The Brave -->
+                <!-- 制作形態：個人 / 制作年次：1年次 / カテゴリ：VR -->
+                <div id="Adventure_of_TheBrave" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\Adventure_of_TheBrave_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\Adventure_of_TheBrave_Button.png"
+                                alt="Adventure_of_TheBrave_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- COLLECT STARS -->
+                <!-- 制作形態：個人 / 制作年次：1年次 / カテゴリ：2D -->
+                <div id="COLLECT_STARS" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\COLLECT_STARS_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\COLLECT_STARS_Button.png"
+                                alt="COLLECT_STARS_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Black Jack -->
+                <!-- 制作形態：個人 / 制作年次：2年次 / カテゴリ：2D -->
+                <div id="Black_Jack" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\Black_Jack_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\BLACKJACK_Button.png"
+                                alt="BLACKJACK_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Block Breaker -->
+                <!-- 制作形態：個人 / 制作年次：1年次 / カテゴリ：2D -->
+                <div id="Block_Breaker" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\Block_Breaker_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\BLOCK_BREAKER_Button.png"
+                                alt="BLOCK_BREAKER_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Unity-Chan! Runner -->
+                <!-- 制作形態：チーム / 制作年次：2年次 / カテゴリ：3D -->
+                <div id="Unity-Chan!_Runner" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\Unity-Chan!_Runner_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\Unity-Chan!_Runner_Button.png"
+                                alt="Unity-Chan!_Runner_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- EE Catcher -->
+                <!-- 制作形態：チーム / 制作年次：2年次 / カテゴリ：2D -->
+                <div id="EE_Catcher" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\EE_Catcher_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\EE_Catcher_Button.png"
+                                alt="EE_Catcher_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Rabbit Runner -->
+                <!-- 制作形態：個人 / 制作年次：3年次 / カテゴリ：2D -->
+                <div id="Rabbit_Runner" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\Rabbit_Runner_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\Rabbit_Runner_Button.png"
+                                alt="Rabbit_Runner_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- HIGH SPEED RACING 3D -->
+                <!-- 制作形態：個人 / 制作年次：2年次 / カテゴリ：3D -->
+                <div id="HIGH_SPEED_RACING_3D" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\HIGH_SPEED_RACING_3D_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\HIGH_SPEED_RACING_3D_Button.png"
+                                alt="HIGH_SPEED_RACING_3D_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Hit & Blow -->
+                <!-- 制作形態：個人 / 制作年次：3年次 / カテゴリ：2D -->
+                <div id="Hit&Blow" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\COLLECTION_webPage\Hit_Blow_webPage\index.html">
+                            <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\Hit&Blow_Button.png"
+                                alt="Hit&Blow_ボタン" width="474" height="360">
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="back_div">
+                <button class="backbutton">
+                    <a href="#">
+                        <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\backButton.png">
+                    </a>
+                </button>
+            </div>
+            <div class="Footer">
+                <div class="copyrightText">
+                    &copy;2025 sol_dev
+                </div>
+                <button class="X_icon">
+                    <a href="https://x.com/sol68714013" target="_blank">
+                        <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\icons8-x-50.png" alt="Xのアイコン">
+                    </a>
+                </button>
+                <button class="GitHub_icon">
+                    <a href="https://github.com/sol1106" target="_blank">
+                        <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\icons8-github-64.png" alt="GitHubのアイコン">
+                    </a>
+                </button>
+                <button class="YouTube_icon">
+                    <a href="https://www.youtube.com/@sol-yj5dm" target="_blank">
+                        <img src="D:\就職活動フォルダ\ポートフォリオ\ポートフォリオ_web\img\icons8-プレイ動画-48.png" alt="YouTubeのアイコン">
+                    </a>
+                </button>
+            </div>
+        </footer>
+    </body>
+</html>

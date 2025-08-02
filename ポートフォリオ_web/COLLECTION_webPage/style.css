@@ -1,0 +1,146 @@
+html{
+  scroll-behavior: smooth;
+}
+.Header{
+    align-items: center;
+    display: flex;
+    height: 30px;
+    margin: auto;
+    background-color: #efefef;
+    justify-content: flex-end;
+}
+.nav_Class{
+  display: flex;
+}
+.nav_Item{
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    margin-right: 1.5cm;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 20px;
+}
+.copyrightText{
+    color: black;
+    background-color: #FFFFFF88;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 32px;
+    position-anchor: center;
+    margin-left: auto;
+}
+.headerText{
+    background: linear-gradient(to bottom, red,#770000);
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 2cm;
+    font-size: 32px;
+    color: white;
+    text-shadow:
+      2px 2px 0 #000,
+      -2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000;
+}
+.headtext{
+    color: white;
+    text-align: center;
+    font-family: "HGP創英角ｺﾞｼｯｸUB";
+    font-size: 40px;
+    background: linear-gradient(to right, rgb(162, 0, 0),red,white);
+    margin-top: 3cm;
+}
+.X_icon{
+    background-color: #00000000;
+    border: none;
+}
+.GitHub_icon{
+    background-color: #00000000;
+    border: none;
+}
+.YouTube_icon{
+    background-color: #00000000;
+    border: none;
+}
+.Footer{
+    background-color: #efefefcc;
+    text-align: center;
+    margin-top: 3rem;
+}
+/* 画像資料 */
+.ImageBoxParent{
+  display: grid;
+  grid: 28rem 28rem 28rem 28rem / 31rem 31rem 31rem;
+}
+.ImageBox{
+  margin-top: 2cm;
+  margin-left: 0.5cm;
+}
+.contentsButton{
+  border: 2px solid transparent;
+  background-color: #FFFFFF00;
+  color: white;
+  cursor: pointer;
+}
+/* マウスオーバー時のコンテンツボタン */
+.contentsButton:hover{
+  /* 大きさを1.05倍にする */
+  transform: scale(1.05, 1.05);
+
+  /* 枠線のサイズを2px、色を黄色にする */
+  border: 2px solid yellow;
+
+  /* 背景色を黄色にする */
+  background: yellow;
+  color: #333;
+}
+/* ページの先頭まで戻るボタン用 */
+.back_div{
+  text-align: center;
+  margin-top: 1cm;
+}
+.backbutton{
+  background-color: #FFFFFF00;
+  border: none;
+}
+.dropdown_parent{
+  display: flex;
+  margin-left: auto;
+}
+.dropdown_production_parent{
+  display: flex;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+.dropdown_category_parent{
+  display: flex;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+.dropdown_grade_parent{
+  display: flex;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+.dropdown{
+  height: auto;
+  margin-left: auto;
+}
+.searchBox{
+  text-align: center;
+  margin-top: 1.2cm;
+}
+.searchText{
+  width: 10%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to bottom, orange, rgb(154, 0, 0), orange);
+  border: 2px solid white;
+}

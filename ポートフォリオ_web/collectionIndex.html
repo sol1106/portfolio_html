@@ -75,6 +75,7 @@
                     function buttonClick(){
                         // 「個人」
                         if(productionSelect.value == '個人'){
+                            document.getElementById('TYRAN_MACHINA').style.display = "none";
                             document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
                             document.getElementById('Unity-Chan!_Runner').style.display = "none";
                             document.getElementById('EE_Catcher').style.display = "none";
@@ -251,6 +252,7 @@
                             // 「チーム」「1年次」
                             if (gradeSelect.value == '1'){
                                 // 「1年次」ではない作品は非表示にする
+                                document.getElementById('TYRAN_MACHINA').style.display = "none";
                                 document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
                                 document.getElementById('Unity-Chan!_Runner').style.display = "none";
                                 document.getElementById('EE_Catcher').style.display = "none";
@@ -274,6 +276,9 @@
                             }
                             // 「チーム」「2年次」
                             else if(gradeSelect.value == '2'){
+                                // 「2年次」ではない作品は非表示にする
+                                document.getElementById('TYRAN_MACHINA').style.display = "none";
+
                                 // 「チーム」「2年次」「2D」
                                 if(categorySelect.value == '2D'){
                                     document.getElementById('EE_Catcher').style.display = "";
@@ -316,7 +321,7 @@
                                 }
                                 // 「チーム」「3年次」「VR」
                                 else if(categorySelect.value == 'VR'){
-                                    // 該当作品なし
+                                    document.getElementById('TYRAN_MACHINA').style.display = "";
                                 }
                                 // 「チーム」「3年次」「未選択」
                                 else{
@@ -330,24 +335,28 @@
                                     document.getElementById('EE_Catcher').style.display = "";
                                     document.getElementById('Unity-Chan!_Runner').style.display = "none";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "none";
                                 }
                                 // 「チーム」「未選択」「3D」
                                 else if(categorySelect.value == '3D'){
                                     document.getElementById('EE_Catcher').style.display = "none";
                                     document.getElementById('Unity-Chan!_Runner').style.display = "";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "none";
                                 }
                                 // 「チーム」「未選択」「VR」
                                 else if(categorySelect.value == 'VR'){
                                     document.getElementById('EE_Catcher').style.display = "none";
                                     document.getElementById('Unity-Chan!_Runner').style.display = "none";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "";
                                 }
                                 // 「チーム」「未選択」「未選択」
                                 else{
                                     document.getElementById('EE_Catcher').style.display = "";
                                     document.getElementById('Unity-Chan!_Runner').style.display = "";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "";
                                 }
                             }
                         }
@@ -356,6 +365,7 @@
                             // 「未選択」「1年次」
                             if(gradeSelect.value == '1'){
                                 // 「1年次」ではない作品は非表示にする
+                                document.getElementById('TYRAN_MACHINA').style.display = "none";
                                 document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
                                 document.getElementById('Brave_Quarter').style.display = "none";
                                 document.getElementById('Black_Jack').style.display = "none";
@@ -397,6 +407,7 @@
                             // 「未選択」「2年次」
                             else if(gradeSelect.value == '2'){
                                 // 「2年次」ではない作品は非表示にする
+                                document.getElementById('TYRAN_MACHINA').style.display = "none";
                                 document.getElementById('GALAXY_WARS').style.display = "none";
                                 document.getElementById('Adventure_of_TheBrave').style.display = "none";
                                 document.getElementById('COLLECT_STARS').style.display = "none";
@@ -459,27 +470,32 @@
                                 if(categorySelect.value == '2D'){
                                     document.getElementById('Rabbit_Runner').style.display = "";
                                     document.getElementById('Hit&Blow').style.display = "";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "none";
                                 }
                                 // 「未選択」「3年次」「3D」
                                 else if(categorySelect.value == '3D'){
                                     document.getElementById('Rabbit_Runner').style.display = "none";
                                     document.getElementById('Hit&Blow').style.display = "none";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "none";
                                 }
                                 // 「未選択」「3年次」「VR」
                                 else if(categorySelect.value == 'VR'){
                                     document.getElementById('Rabbit_Runner').style.display = "none";
                                     document.getElementById('Hit&Blow').style.display = "none";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "";
                                 }
                                 // 「未選択」「3年次」「未選択」
                                 else{
                                     document.getElementById('Rabbit_Runner').style.display = "";
                                     document.getElementById('Hit&Blow').style.display = "";
+                                    document.getElementById('TYRAN_MACHINA').style.display = "";
                                 }
                             }
                             // 「未選択」「未選択」
                             else{
                                 // 「未選択」「未選択」「2D」
                                 if(categorySelect.value == '2D'){
+                                    document.getElementById('TYRAN_MACHINA').style.display = "none";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
                                     document.getElementById('GALAXY_WARS').style.display = "";
                                     document.getElementById('Brave_Quarter').style.display = "";
@@ -495,6 +511,7 @@
                                 }
                                 // 「未選択」「未選択」「3D」
                                 else if(categorySelect.value == '3D'){
+                                    document.getElementById('TYRAN_MACHINA').style.display = "none";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "none";
                                     document.getElementById('GALAXY_WARS').style.display = "none";
                                     document.getElementById('Brave_Quarter').style.display = "none";
@@ -510,6 +527,7 @@
                                 }
                                 // 「未選択」「未選択」「VR」
                                 else if(categorySelect.value == 'VR'){
+                                    document.getElementById('TYRAN_MACHINA').style.display = "";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "";
                                     document.getElementById('GALAXY_WARS').style.display = "none";
                                     document.getElementById('Brave_Quarter').style.display = "none";
@@ -525,6 +543,7 @@
                                 }
                                 // 「未選択」「未選択」「未選択」
                                 else{
+                                    document.getElementById('TYRAN_MACHINA').style.display = "";
                                     document.getElementById('Universe_Rhythm_Shooting').style.display = "";
                                     document.getElementById('GALAXY_WARS').style.display = "";
                                     document.getElementById('Brave_Quarter').style.display = "";
@@ -553,6 +572,17 @@
         </section>
         <section>
             <div class="ImageBoxParent">
+                <!-- TYRAN MACHINA -->
+                <!-- 制作形態：チーム / 制作年次：3年次 / カテゴリ：VR -->
+                <div id="TYRAN_MACHINA" class="ImageBox">
+                    <button class="contentsButton">
+                        <a href="TYRAN_MACHINA_Index.html">
+                            <img src="img/TYRAN_MACHINA_Button.png"
+                                alt="TYRAN_MACHINAボタン" width="476" height="360">
+                        </a>
+                    </button>
+                </div>
+
                 <!-- Universe Rhythm Shooting -->
                 <!-- 制作形態：チーム / 制作年次：2年次 / カテゴリ：VR -->
                 <div id="Universe_Rhythm_Shooting" class="ImageBox">
